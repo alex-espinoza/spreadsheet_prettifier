@@ -62,6 +62,7 @@ class FormattedList
       # Todo: 6. Separate the Residence bookings from the Homestay bookings by a few rows (not sure what this means)
 
       # find elements needed to get deleted, EDGE CASE: 8. is it "Finance" or "Finance Note?"
+      # EDITING DATA IN PLACE IS SO MUCH FUN ! ! !
       columns_to_delete_array = @headers_array.each_index.select {|i| @headers_array[i] =~ /^Status|^Accommodation|^Finance Note|^Room|^Type/}
       @headers_array.reject!.each_with_index {|v, i| columns_to_delete_array.include?(i)}
 
